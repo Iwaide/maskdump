@@ -1,8 +1,8 @@
 require 'active_support'
 require 'active_support/core_ext'
-require 'maskdump/mask/tel'
-require 'maskdump/mask/email'
-require 'maskdump/mask/blackout'
+require 'maskdump/mask_method/tel'
+require 'maskdump/mask_method/email'
+require 'maskdump/mask_method/blackout'
 
 module Maskdump
   class Mask
