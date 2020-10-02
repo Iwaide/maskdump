@@ -1,7 +1,6 @@
 require 'thor'
 require 'yaml'
 require 'active_record'
-require './mask'
 
 module Maskdump
   class Command < Thor

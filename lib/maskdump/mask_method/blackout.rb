@@ -15,7 +15,7 @@ module Maskdump
           @counter += 1
         end
       end
-      mask
+
       private
 
       def process(record)

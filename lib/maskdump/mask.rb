@@ -25,7 +25,7 @@ module Maskdump
       klass = File.join(DIR_PREFIX, column_setting[:method]).classify.safe_constantize
       klass ? klass : custom_mask_klass(column_setting[:method])
     end
-    plugin_paths
+
     def custom_mask_klass(method)
       paths = plugin_paths(method)
       raise "TODO" if paths.empty?
@@ -38,7 +38,7 @@ module Maskdump
     def plugin_paths(method)
       $LOAD_PATH.map do |load_path|
         path = File.join(load_path, plugin_path(method)) + ".rb"
-        File.exist?(path) ? path : nil 
+        File.exist?(path) ? path : nil
       end.compact
     end
 
