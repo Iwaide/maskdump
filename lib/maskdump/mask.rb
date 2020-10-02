@@ -6,7 +6,7 @@ require 'maskdump/mask/blackout'
 
 module Maskdump
   class Mask
-    DIR_PREFIX = "maskdump/mask".freeze
+    DIR_PREFIX = "maskdump/mask_method".freeze
 
     def initialize(records, column_settings)
       @column_settings = column_settings
@@ -25,7 +25,7 @@ module Maskdump
       klass = File.join(DIR_PREFIX, column_setting[:method]).classify.safe_constantize
       klass ? klass : custom_mask_klass(column_setting[:method])
     end
-
+    plugin_paths
     def custom_mask_klass(method)
       paths = plugin_paths(method)
       raise "TODO" if paths.empty?

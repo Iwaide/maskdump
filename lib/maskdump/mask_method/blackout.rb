@@ -1,5 +1,5 @@
 module Maskdump
-  module Mask
+  module MaskMethod
     class Blackout
       BLACKOUT_CHAR = "#"
 
@@ -15,7 +15,7 @@ module Maskdump
           @counter += 1
         end
       end
-
+      mask
       private
 
       def process(record)
